@@ -1,0 +1,12 @@
+{
+  "layout": {
+    "logo": {
+      "name": "KitsuneKey"
+    }
+  },
+  "pages": {
+    "main": {
+      "title": "KitsuneKey | Home page"
+    }
+  }
+}
