@@ -2,6 +2,10 @@
   "layout": {
     "logo": {
       "name": "KitsuneKey"
+    },
+    "menu": {
+      "help": "Help center",
+      "auth": "SignUp or login"
     }
   },
   "pages": {

@@ -11,5 +11,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function MainPage() {
-  return <Container></Container>
+  return <Container>Main page</Container>
 }
