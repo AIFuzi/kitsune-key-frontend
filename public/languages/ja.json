@@ -46,7 +46,8 @@
         "aboutMe": "自己紹介:"
       },
       "switchFormMessage": "すでにアカウントをお持ちですか？",
-      "switchFormButtonLabel": "ログイン"
+      "switchFormButtonLabel": "ログイン",
+      "buttonLoadingLabel": "しばらくお待ちください"
     },
     "login": {
       "heading": "KitsuneKey | ログイン",
@@ -57,7 +58,8 @@
         "email": "メールアドレス:"
       },
       "switchFormMessage": "アカウントをお持ちでないですか？",
-      "switchFormButtonLabel": "登録"
+      "switchFormButtonLabel": "登録",
+      "buttonLoadingLabel": "しばらくお待ちください"
     }
   }
 }

@@ -1,7 +1,10 @@
 'use client'
 
+import { LoginService } from '@/service/auth/login.service'
 import { zodResolver } from '@hookform/resolvers/zod'
+import axios from 'axios'
 import { useTranslations } from 'next-intl'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import AuthWrapper from '@/components/AuthWrapper'
 import { Button } from '@/components/ui/button'
@@ -14,10 +17,14 @@ import {
   FormLabel,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { Spinner } from '@/components/ui/spinner'
+import { IError } from '@/libs/interfaces'
 import { loginSchema, TypeLoginSchema } from '@/schemas/auth/login.schema'
 
 export default function LoginForm() {
   const t = useTranslations('auth.login')
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const form = useForm<TypeLoginSchema>({
     resolver: zodResolver(loginSchema),
@@ -27,8 +34,23 @@ export default function LoginForm() {
     },
   })
 
-  function onSubmit(data: TypeLoginSchema) {
-    console.log(data)
+  async function onSubmit(data: TypeLoginSchema) {
+    setIsLoading(true)
+
+    try {
+      await LoginService.login(data.email, data.password)
+    } catch (e) {
+      if (axios.isAxiosError(e) && e.response) {
+        const err = e.response.data as IError
+
+        form.setError('root', {
+          type: 'server',
+          message: !Array.isArray(err.message) ? err.message : err.message[0],
+        })
+      }
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -76,13 +98,21 @@ export default function LoginForm() {
             name="password"
           />
           <FormDescription className="font-semibold text-red-500">
-            __ERR MESSAGES__
+            {form.formState.errors.root?.message}
           </FormDescription>
           <Button
             type="submit"
             className="w-full"
+            disabled={isLoading}
           >
-            {t('buttonLabel')}
+            {isLoading ? (
+              <div className="flex items-center">
+                <Spinner />
+                <span>{t('buttonLoadingLabel')}</span>
+              </div>
+            ) : (
+              t('buttonLabel')
+            )}
           </Button>
         </form>
       </Form>

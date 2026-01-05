@@ -46,7 +46,8 @@
         "aboutMe": "자기소개:"
       },
       "switchFormMessage": "이미 계정이 있으신가요?",
-      "switchFormButtonLabel": "로그인"
+      "switchFormButtonLabel": "로그인",
+      "buttonLoadingLabel": "잠시만 기다려 주세요"
     },
     "login": {
       "heading": "KitsuneKey | 로그인",
@@ -57,7 +58,8 @@
         "email": "이메일:"
       },
       "switchFormMessage": "계정이 없으신가요?",
-      "switchFormButtonLabel": "회원가입"
+      "switchFormButtonLabel": "회원가입",
+      "buttonLoadingLabel": "잠시만 기다려 주세요"
     }
   }
 }
