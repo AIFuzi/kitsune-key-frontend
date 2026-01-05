@@ -1,5 +1,6 @@
 import { CircleQuestionMark, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,8 +24,8 @@ export default function UserMenu() {
           <span>{t('help')}</span>
         </div>
         <DropdownMenuSeparator />
-        <div>
-          <span>{t('auth')}</span>
+        <div className="w-full p-1 transition-colors hover:bg-neutral-300">
+          <Link href="login">{t('auth')}</Link>
         </div>
       </DropdownMenuContent>
     </DropdownMenu>

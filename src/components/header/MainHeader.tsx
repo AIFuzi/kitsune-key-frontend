@@ -2,6 +2,7 @@
 
 import { useWindowScroll } from '@uidotdev/usehooks'
 import { Globe, Search } from 'lucide-react'
+import LangCurrencyDialog from '@/components/dialogs/LangCurrencyDialog'
 import UserMenu from '@/components/header/UserMenu'
 import Container from '@/components/shared/Container'
 import Logo from '@/components/shared/Logo'
@@ -30,9 +31,12 @@ export default function MainHeader() {
           </div>
         </div>
         <div className="flex gap-x-3">
-          <div className="cursor-pointer rounded-full bg-neutral-200 p-3 transition-colors hover:bg-neutral-300">
-            <Globe size={16} />
-          </div>
+          <LangCurrencyDialog>
+            <div className="cursor-pointer rounded-full bg-neutral-200 p-3 transition-colors hover:bg-neutral-300">
+              <Globe size={16} />
+            </div>
+          </LangCurrencyDialog>
+
           <UserMenu />
         </div>
       </Container>

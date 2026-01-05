@@ -4,32 +4,32 @@
       "name": "KitsuneKey"
     },
     "menu": {
-      "help": "Help center",
-      "auth": "SignUp or login",
+      "help": "도움말 센터",
+      "auth": "회원가입 또는 로그인",
       "settings": {
-        "language": "Language",
+        "language": "언어",
         "currency": {
-          "heading": "Currency",
+          "heading": "통화",
           "dollar": {
-            "heading": "USA dollar",
+            "heading": "미국 달러",
             "description": "USD – $"
           },
           "won": {
-            "heading": "Korean won",
+            "heading": "한국 원",
             "description": "KRW – ₩"
           },
           "yen": {
-            "heading": "Japan yen",
+            "heading": "일본 엔",
             "description": "JPY – ¥"
           }
         },
-        "heading": "Select language and currency"
+        "heading": "언어 및 통화 선택"
       }
     }
   },
   "pages": {
     "main": {
-      "title": "KitsuneKey | Home page"
+      "title": "KitsuneKey | 홈 페이지"
     }
   }
 }
