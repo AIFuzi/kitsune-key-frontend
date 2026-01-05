@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import CreateAccountForm from '@/components/forms/auth/CreateAccountForm'
+import LoginForm from '@/components/forms/auth/LoginForm'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('auth.login')
@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function LoginPage() {
   return (
     <div className="h-screen">
-      <CreateAccountForm />
+      <LoginForm />
     </div>
   )
 }

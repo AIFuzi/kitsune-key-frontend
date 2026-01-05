@@ -23,7 +23,7 @@ export default function AuthWrapper({
         <div className="flex items-center justify-center gap-x-1">
           <span>{switchFormText}</span>
           <Link
-            className="underline"
+            className="text-primary font-bold underline"
             href={`/${switchFormLink}`}
           >
             {switchFormLinkLabel}
