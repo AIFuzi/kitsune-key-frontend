@@ -14,7 +14,7 @@ export default function MainHeader() {
 
   return (
     <header
-      className={`sticky m-auto shadow-sm shadow-neutral-300/20 ${y && y > 50 ? 'top-5 h-18 w-[90%] rounded-full border' : 'top-0 h-20 w-full border-b'} border-zinc-100 bg-[#fefefe]/40 backdrop-blur-sm transition-all`}
+      className={`sticky z-10 m-auto shadow-sm shadow-neutral-300/20 ${y && y > 50 ? 'top-5 h-18 w-[90%] rounded-full border' : 'top-0 h-20 w-full border-b'} border-zinc-100 bg-[#fefefe]/40 backdrop-blur-sm transition-all`}
     >
       <Container className="flex h-full items-center justify-between">
         <Logo />
