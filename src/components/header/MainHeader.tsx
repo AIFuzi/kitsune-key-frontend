@@ -1,4 +1,7 @@
-import { Globe, Home, Menu, Search } from 'lucide-react'
+'use client'
+
+import { useWindowScroll } from '@uidotdev/usehooks'
+import { Globe, Search } from 'lucide-react'
 import UserMenu from '@/components/header/UserMenu'
 import Container from '@/components/shared/Container'
 import Logo from '@/components/shared/Logo'
@@ -6,8 +9,12 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 
 export default function MainHeader() {
+  const [{ y }] = useWindowScroll()
+
   return (
-    <header className="sticky top-0 h-20 w-full border-b border-zinc-100 bg-[#fefefe]/40 backdrop-blur-sm">
+    <header
+      className={`sticky m-auto shadow-sm shadow-neutral-300/20 ${y && y > 50 ? 'top-5 h-18 w-[90%] rounded-full border' : 'top-0 h-20 w-full border-b'} border-zinc-100 bg-[#fefefe]/40 backdrop-blur-sm transition-all`}
+    >
       <Container className="flex h-full items-center justify-between">
         <Logo />
         <div className="rounded-full border border-neutral-300">
