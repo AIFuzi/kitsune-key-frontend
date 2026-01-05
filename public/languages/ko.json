@@ -31,5 +31,33 @@
     "main": {
       "title": "KitsuneKey | 홈 페이지"
     }
+  },
+  "auth": {
+    "create": {
+      "heading": "KitsuneKey | 계정 생성",
+      "title": "계정 생성",
+      "aboutMePlaceholder": "저는 사진 찍는 것을 좋아해요....",
+      "buttonLabel": "계정 생성",
+      "fields": {
+        "name": "이름:",
+        "password": "비밀번호:",
+        "email": "이메일:",
+        "birthday": "생년월일:",
+        "aboutMe": "자기소개:"
+      },
+      "switchFormMessage": "이미 계정이 있으신가요?",
+      "switchFormButtonLabel": "로그인"
+    },
+    "login": {
+      "heading": "KitsuneKey | 로그인",
+      "title": "로그인",
+      "buttonLabel": "로그인",
+      "fields": {
+        "password": "비밀번호:",
+        "email": "이메일:"
+      },
+      "switchFormMessage": "계정이 없으신가요?",
+      "switchFormButtonLabel": "회원가입"
+    }
   }
 }

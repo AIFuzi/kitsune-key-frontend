@@ -31,5 +31,33 @@
     "main": {
       "title": "KitsuneKey | ホームページ"
     }
+  },
+  "auth": {
+    "create": {
+      "heading": "KitsuneKey | アカウント作成",
+      "title": "アカウント作成",
+      "aboutMePlaceholder": "写真を撮るのが好きです....",
+      "buttonLabel": "アカウント作成",
+      "fields": {
+        "name": "名前:",
+        "password": "パスワード:",
+        "email": "メールアドレス:",
+        "birthday": "生年月日:",
+        "aboutMe": "自己紹介:"
+      },
+      "switchFormMessage": "すでにアカウントをお持ちですか？",
+      "switchFormButtonLabel": "ログイン"
+    },
+    "login": {
+      "heading": "KitsuneKey | ログイン",
+      "title": "ログイン",
+      "buttonLabel": "ログイン",
+      "fields": {
+        "password": "パスワード:",
+        "email": "メールアドレス:"
+      },
+      "switchFormMessage": "アカウントをお持ちでないですか？",
+      "switchFormButtonLabel": "登録"
+    }
   }
 }

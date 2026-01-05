@@ -31,5 +31,33 @@
     "main": {
       "title": "KitsuneKey | Home page"
     }
+  },
+  "auth": {
+    "create": {
+      "heading": "KitsuneKey | Create account",
+      "title": "Create account",
+      "aboutMePlaceholder": "I love photo....",
+      "buttonLabel": "Create account",
+      "fields": {
+        "name": "Name:",
+        "password": "Password:",
+        "email": "Email:",
+        "birthday": "Birthday:",
+        "aboutMe": "About me:"
+      },
+      "switchFormMessage": "Have an account?",
+      "switchFormButtonLabel": "Login"
+    },
+    "login": {
+      "heading": "KitsuneKey | Login account",
+      "title": "Login",
+      "buttonLabel": "Login",
+      "fields": {
+        "password": "Password:",
+        "email": "Email:"
+      },
+      "switchFormMessage": "No account?",
+      "switchFormButtonLabel": "Register"
+    }
   }
 }
