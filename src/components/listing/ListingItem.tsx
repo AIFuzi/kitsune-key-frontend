@@ -2,6 +2,7 @@
 
 import { calculateCurrency } from '@/utils'
 import { Heart, Star } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { Skeleton } from '@/components/ui/skeleton'
 import { useCurrency } from '@/hooks/useCurrency'
@@ -12,6 +13,8 @@ interface ListingItemProps {
 }
 
 export default function ListingItem({ listingInfo }: ListingItemProps) {
+  const t = useTranslations('listing')
+
   const { currency } = useCurrency()
 
   const [isFilled, setIsFilled] = useState(false)
@@ -44,7 +47,8 @@ export default function ListingItem({ listingInfo }: ListingItemProps) {
       <div className="text-muted-foreground flex flex-col">
         <span className="text-sm font-semibold">{listingInfo.title}</span>
         <span className="text-sm font-semibold">
-          Bed {listingInfo.bedCount} · Bath {listingInfo.bathCount}
+          {`${t('bed')} ${listingInfo.bedCount}`} ·{' '}
+          {`${t('bath')} ${listingInfo.bathCount}`}
         </span>
       </div>
       <div className="flex items-center space-x-1">
@@ -56,7 +60,9 @@ export default function ListingItem({ listingInfo }: ListingItemProps) {
         <h1 className="text-lg font-semibold underline">
           {calculateCurrency(currency, listingInfo.price)}
         </h1>
-        <span className="text-muted-foreground font-semibold">day</span>
+        <span className="text-muted-foreground font-semibold">
+          {t('period')}
+        </span>
       </div>
     </div>
   )

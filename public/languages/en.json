@@ -61,5 +61,11 @@
       "switchFormButtonLabel": "Register",
       "buttonLoadingLabel": "Please wait"
     }
+  },
+  "listing": {
+    "heading": "Korea listings",
+    "period": "day",
+    "bed": "Bed",
+    "bath": "Bath"
   }
 }

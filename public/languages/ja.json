@@ -61,5 +61,11 @@
       "switchFormButtonLabel": "登録",
       "buttonLoadingLabel": "しばらくお待ちください"
     }
+  },
+  "listing": {
+    "heading": "韓国の宿泊施設",
+    "period": "日",
+    "bed": "ベッド",
+    "bath": "バスルーム"
   }
 }

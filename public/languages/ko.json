@@ -61,5 +61,11 @@
       "switchFormButtonLabel": "회원가입",
       "buttonLoadingLabel": "잠시만 기다려 주세요"
     }
+  },
+  "listing": {
+    "heading": "한국 숙소",
+    "period": "일",
+    "bed": "침대",
+    "bath": "욕실"
   }
 }
