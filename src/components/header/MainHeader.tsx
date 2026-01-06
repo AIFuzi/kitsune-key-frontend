@@ -14,11 +14,11 @@ export default function MainHeader() {
 
   return (
     <header
-      className={`sticky z-10 m-auto shadow-sm shadow-neutral-300/20 ${y && y > 50 ? 'top-5 h-18 w-[90%] rounded-full border' : 'top-0 h-20 w-full border-b'} border-zinc-100 bg-[#fefefe]/40 backdrop-blur-sm transition-all`}
+      className={`sticky z-10 m-auto shadow-lg shadow-neutral-300/20 ${y && y > 50 ? 'top-5 h-18 w-[90%] rounded-full border' : 'top-0 h-20 w-full border-b'} border-zinc-100 bg-[#fefefe]/85 backdrop-blur-sm transition-all`}
     >
       <Container className="flex h-full items-center justify-between">
         <Logo />
-        <div className="rounded-full border border-neutral-300">
+        <div className="shadow-primary/40 rounded-full border border-neutral-300 transition-all hover:-translate-y-0.5 hover:shadow-lg">
           <div className="flex items-center justify-between gap-x-3 p-2">
             <Input placeholder="country" />
             <Input
@@ -36,7 +36,6 @@ export default function MainHeader() {
               <Globe size={16} />
             </div>
           </LangCurrencyDialog>
-
           <UserMenu />
         </div>
       </Container>

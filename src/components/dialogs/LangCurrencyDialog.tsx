@@ -61,13 +61,13 @@ export default function LangCurrencyDialog({ children }: PropsWithChildren) {
                 type="currency"
                 title={t('currency.won.heading')}
                 description={t('currency.won.description')}
-                currency="won"
+                currency="krw"
               />
               <SelectLangCurrencyButton
                 type="currency"
                 title={t('currency.yen.heading')}
                 description={t('currency.yen.description')}
-                currency="yen"
+                currency="jpy"
               />
             </div>
           </div>
