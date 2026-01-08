@@ -63,7 +63,8 @@
     }
   },
   "listing": {
-    "heading": "한국 숙소",
+    "headingKr": "한국 숙소",
+    "headingJp": "일본 숙소",
     "period": "일",
     "bed": "침대",
     "bath": "욕실"

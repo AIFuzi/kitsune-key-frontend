@@ -63,7 +63,8 @@
     }
   },
   "listing": {
-    "heading": "韓国の宿泊施設",
+    "headingKr": "韓国の宿泊施設",
+    "headingJp": "日本の宿泊施設",
     "period": "日",
     "bed": "ベッド",
     "bath": "バスルーム"

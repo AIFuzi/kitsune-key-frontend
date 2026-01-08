@@ -63,7 +63,8 @@
     }
   },
   "listing": {
-    "heading": "Korea listings",
+    "headingKr": "Korea listings",
+    "headingJp": "Japan listings",
     "period": "day",
     "bed": "Bed",
     "bath": "Bath"

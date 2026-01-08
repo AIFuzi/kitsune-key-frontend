@@ -25,10 +25,10 @@ export default function ListingItem({ listingInfo }: ListingItemProps) {
       href="/listing"
       className="transition-all hover:-translate-y-1"
     >
-      <div className="h-56 w-56">
+      <div>
         <div className="relative h-full w-full">
           <div
-            className="h-full w-full rounded-xl bg-cover bg-center"
+            className="h-56 w-56 rounded-xl bg-cover bg-center"
             style={{
               backgroundImage: `url(http://localhost:9000/kitsune-key/${listingInfo.imageUrl[0]}`,
             }}

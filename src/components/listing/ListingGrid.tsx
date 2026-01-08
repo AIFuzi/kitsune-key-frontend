@@ -8,7 +8,17 @@ import ListingItem, {
 } from '@/components/listing/ListingItem'
 import { IAllListings } from '@/libs/interfaces'
 
-export default function ListingGrid() {
+interface ListingGridProps {
+  country: string
+  page?: number
+  limit?: number
+}
+
+export default function ListingGrid({
+  country,
+  page,
+  limit,
+}: ListingGridProps) {
   const [isLoading, setIsLoading] = useState(true)
   const [listings, setListings] = useState<IAllListings>()
 
@@ -17,7 +27,11 @@ export default function ListingGrid() {
       setIsLoading(true)
 
       try {
-        const response = await ListingService.fetchListings()
+        const response = await ListingService.fetchListings(
+          country,
+          page,
+          limit,
+        )
         setListings(response.data)
       } catch (e) {
         if (e instanceof Error) {
@@ -32,13 +46,13 @@ export default function ListingGrid() {
   }, [])
 
   return isLoading ? (
-    <div className="mt-3 grid space-y-25 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+    <div className="mt-3 grid space-y-6 space-x-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
       {Array.from({ length: 25 }).map((_, i) => (
         <ListingItemSkeleton key={i} />
       ))}
     </div>
   ) : (
-    <div className="mt-3 grid space-y-25 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+    <div className="mt-3 grid space-y-6 space-x-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
       {listings?.listings.map(listing => (
         <ListingItem
           key={listing.id}
