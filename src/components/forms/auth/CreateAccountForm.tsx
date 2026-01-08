@@ -1,5 +1,6 @@
 'use client'
 
+import { PageConfig } from '@/libs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
@@ -19,6 +20,7 @@ import {
   createAccountSchema,
   TypeCreateAccountSchema,
 } from '@/schemas/auth/create-account.schema'
+
 
 export default function CreateAccountForm() {
   const t = useTranslations('auth.create')
@@ -41,7 +43,7 @@ export default function CreateAccountForm() {
   return (
     <AuthWrapper
       heading={t('title')}
-      switchFormLink="login"
+      switchFormLink={PageConfig.LOGIN_PAGE}
       switchFormLinkLabel={t('switchFormButtonLabel')}
       switchFormText={t('switchFormMessage')}
     >

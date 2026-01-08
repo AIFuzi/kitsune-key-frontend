@@ -1,5 +1,6 @@
 'use client'
 
+import { PageConfig } from '@/libs'
 import { LoginService } from '@/service/auth/login.service'
 import { zodResolver } from '@hookform/resolvers/zod'
 import axios from 'axios'
@@ -20,6 +21,7 @@ import { Input } from '@/components/ui/input'
 import { Spinner } from '@/components/ui/spinner'
 import { IError } from '@/libs/interfaces'
 import { loginSchema, TypeLoginSchema } from '@/schemas/auth/login.schema'
+
 
 export default function LoginForm() {
   const t = useTranslations('auth.login')
@@ -56,7 +58,7 @@ export default function LoginForm() {
   return (
     <AuthWrapper
       heading={t('title')}
-      switchFormLink="register"
+      switchFormLink={PageConfig.REGISTER_PAGE}
       switchFormLinkLabel={t('switchFormButtonLabel')}
       switchFormText={t('switchFormMessage')}
     >

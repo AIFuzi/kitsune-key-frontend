@@ -18,7 +18,7 @@ export default function MainHeader() {
     >
       <Container className="flex h-full items-center justify-between">
         <Logo />
-        <div className="shadow-primary/40 rounded-full border border-neutral-300 transition-all hover:-translate-y-0.5 hover:shadow-lg">
+        <div className="shadow-primary/40 rounded-full border border-neutral-300 bg-white transition-all hover:-translate-y-0.5 hover:shadow-lg">
           <div className="flex items-center justify-between gap-x-3 p-2">
             <Input placeholder="country" />
             <Input

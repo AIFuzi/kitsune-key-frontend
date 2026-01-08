@@ -24,7 +24,7 @@ export default function AuthWrapper({
           <span>{switchFormText}</span>
           <Link
             className="text-primary font-bold underline"
-            href={`/${switchFormLink}`}
+            href={`${switchFormLink}`}
           >
             {switchFormLinkLabel}
           </Link>

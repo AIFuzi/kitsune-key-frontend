@@ -1,3 +1,4 @@
+import { PageConfig } from '@/libs'
 import { CircleQuestionMark, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
@@ -25,7 +26,7 @@ export default function UserMenu() {
         </div>
         <DropdownMenuSeparator />
         <div className="w-full p-1 transition-colors hover:bg-neutral-300">
-          <Link href="/login">{t('auth')}</Link>
+          <Link href={PageConfig.LOGIN_PAGE}>{t('auth')}</Link>
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
