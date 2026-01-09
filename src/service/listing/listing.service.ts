@@ -1,6 +1,6 @@
 import { api } from '@/api/api'
 import { AxiosResponse } from 'axios'
-import { IAllListings } from '@/libs/interfaces'
+import { IAllListings, IOneListing } from '@/libs/interfaces'
 
 export class ListingService {
   static async fetchListings(
@@ -14,5 +14,11 @@ export class ListingService {
         limit,
       },
     })
+  }
+
+  static async getListingInfoById(
+    id: string,
+  ): Promise<AxiosResponse<IOneListing>> {
+    return await api.get(`listing/current/${id}`)
   }
 }
