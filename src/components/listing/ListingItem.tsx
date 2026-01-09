@@ -1,5 +1,6 @@
 'use client'
 
+import { PageConfig } from '@/libs'
 import { calculateCurrency } from '@/utils'
 import { Heart, Star } from 'lucide-react'
 import { useTranslations } from 'next-intl'
@@ -22,15 +23,15 @@ export default function ListingItem({ listingInfo }: ListingItemProps) {
 
   return (
     <Link
-      href="/listing"
+      href={`${PageConfig.ROOMS_PAGE}/${listingInfo.id}`}
       className="transition-all hover:-translate-y-1"
     >
-      <div>
+      <div className="max-w-56">
         <div className="relative h-full w-full">
           <div
             className="h-56 w-56 rounded-xl bg-cover bg-center"
             style={{
-              backgroundImage: `url(http://localhost:9000/kitsune-key/${listingInfo.imageUrl[0]}`,
+              backgroundImage: `url('${process.env.NEXT_PUBLIC_STORAGE_URL}/${listingInfo.imageUrl[0]}')`,
             }}
           />
           <Heart
@@ -40,7 +41,7 @@ export default function ListingItem({ listingInfo }: ListingItemProps) {
               e.stopPropagation()
               setIsFilled(!isFilled)
             }}
-            className={`hover:text-primary absolute top-2 right-4 cursor-pointer text-white transition-all ${isFilled ? 'fill-primary' : 'fill-black/60'}`}
+            className={`hover:text-primary absolute top-2 right-3 cursor-pointer text-white transition-all ${isFilled ? 'fill-primary' : 'fill-black/60'}`}
           />
         </div>
         <div className="flex items-center justify-between">

@@ -46,13 +46,13 @@ export default function ListingGrid({
   }, [])
 
   return isLoading ? (
-    <div className="mt-3 grid space-y-6 space-x-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-      {Array.from({ length: 25 }).map((_, i) => (
+    <div className="mt-3 grid space-y-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+      {Array.from({ length: 12 }).map((_, i) => (
         <ListingItemSkeleton key={i} />
       ))}
     </div>
   ) : (
-    <div className="mt-3 grid space-y-6 space-x-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+    <div className="mt-3 grid space-y-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
       {listings?.listings.map(listing => (
         <ListingItem
           key={listing.id}

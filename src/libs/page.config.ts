@@ -3,4 +3,5 @@ export class PageConfig {
   static LOGIN_PAGE = '/login'
   static REGISTER_PAGE = '/register'
   static ROOMS_PAGE = '/rooms'
+  static USER_PAGE = '/users'
 }

@@ -67,6 +67,14 @@
     "headingJp": "Japan listings",
     "period": "day",
     "bed": "Bed",
-    "bath": "Bath"
+    "bath": "Bath",
+    "rooms": {
+      "heading": "| KitsuneKey",
+      "notFound": "Room not found | KitsuneKey",
+      "title": {
+        "share": "Share",
+        "save": "Save to wishlist"
+      }
+    }
   }
 }
