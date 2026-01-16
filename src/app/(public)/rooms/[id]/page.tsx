@@ -8,7 +8,7 @@ import RoomDescription from '@/components/listing/room/RoomDescription'
 import RoomHighlights from '@/components/listing/room/RoomHighlights'
 import RoomInfoBlock from '@/components/listing/room/RoomInfoBlock'
 import RoomSelectDateCard from '@/components/listing/room/RoomSelectDateCard'
-import RoomStateBlock from '@/components/listing/room/RoomStateBlock'
+import RoomStatsBlock from '@/components/listing/room/RoomStatsBlock'
 import RoomTitle from '@/components/listing/room/RoomTitle'
 import Container from '@/components/shared/Container'
 import { Separator } from '@/components/ui/separator'
@@ -72,7 +72,7 @@ export default async function Page({ params }: PageProps) {
           <RoomSelectDateCard />
         </div>
         <Separator />
-        <RoomStateBlock />
+        <RoomStatsBlock />
         <Separator />
       </div>
     </Container>

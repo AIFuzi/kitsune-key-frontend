@@ -12,7 +12,7 @@ interface RoomStateItemProps {
   Icon: LucideIcon
 }
 
-export default function RoomStateItem({
+export default function RoomStatsItem({
   Icon,
   value,
   type,

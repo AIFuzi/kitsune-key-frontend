@@ -7,7 +7,7 @@ import {
   Star,
   Tag,
 } from 'lucide-react'
-import RoomStateItem from '@/components/listing/room/RoomStateItem'
+import RoomStatsItem from '@/components/listing/room/RoomStatsItem'
 import { Progress } from '@/components/ui/progress'
 import { Separator } from '@/components/ui/separator'
 
@@ -15,7 +15,7 @@ interface RoomStateBlockProps {}
 
 const ratingBars = [99, 0, 0, 0, 0]
 
-export default function RoomStateBlock({}: RoomStateBlockProps) {
+export default function RoomStatsBlock({}: RoomStateBlockProps) {
   return (
     <div className="flex flex-col justify-center space-y-4">
       <div className="flex items-center gap-x-2">
@@ -36,37 +36,37 @@ export default function RoomStateBlock({}: RoomStateBlockProps) {
           ))}
         </div>
         <Separator orientation="vertical" />
-        <RoomStateItem
+        <RoomStatsItem
           value="5.0"
           type="Cleanliness"
           Icon={BrushCleaning}
         />
         <Separator orientation="vertical" />
-        <RoomStateItem
+        <RoomStatsItem
           value="5.0"
           type="Accuracy"
           Icon={CheckCircle2}
         />
         <Separator orientation="vertical" />
-        <RoomStateItem
+        <RoomStatsItem
           value="5.0"
           type="Check-in"
           Icon={KeySquare}
         />
         <Separator orientation="vertical" />
-        <RoomStateItem
+        <RoomStatsItem
           value="5.0"
           type="Communication"
           Icon={MessageSquare}
         />
         <Separator orientation="vertical" />
-        <RoomStateItem
+        <RoomStatsItem
           value="5.0"
           type="Location"
           Icon={MapPinned}
         />
         <Separator orientation="vertical" />
-        <RoomStateItem
+        <RoomStatsItem
           value="5.0"
           type="Value"
           Icon={Tag}
