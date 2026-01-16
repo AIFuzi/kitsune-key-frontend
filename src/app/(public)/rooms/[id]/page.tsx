@@ -1,25 +1,6 @@
 import { ListingService } from '@/service/listing/listing.service'
-import { getIconByAmenitiesType } from '@/utils'
-import {
-  BrushCleaning,
-  CircleCheck,
-  CircleParking,
-  Dumbbell,
-  Flag,
-  Heart,
-  Key,
-  Map,
-  MapPin,
-  Medal,
-  MessageCircle,
-  Share,
-  Star,
-  Tag,
-  Wifi,
-} from 'lucide-react'
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import Image from 'next/image'
 import RoomAmenities from '@/components/listing/room/RoomAmenities'
 import RoomCalendar from '@/components/listing/room/RoomCalendar'
 import RoomCarousel from '@/components/listing/room/RoomCarousel'
@@ -27,41 +8,9 @@ import RoomDescription from '@/components/listing/room/RoomDescription'
 import RoomHighlights from '@/components/listing/room/RoomHighlights'
 import RoomInfoBlock from '@/components/listing/room/RoomInfoBlock'
 import RoomSelectDateCard from '@/components/listing/room/RoomSelectDateCard'
-import RoomStats from '@/components/listing/room/RoomStats'
+import RoomStateBlock from '@/components/listing/room/RoomStateBlock'
 import RoomTitle from '@/components/listing/room/RoomTitle'
 import Container from '@/components/shared/Container'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Calendar } from '@/components/ui/calendar'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover'
-import { Progress } from '@/components/ui/progress'
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 
 interface PageProps {
@@ -123,7 +72,7 @@ export default async function Page({ params }: PageProps) {
           <RoomSelectDateCard />
         </div>
         <Separator />
-        __ROOM STATS__
+        <RoomStateBlock />
         <Separator />
       </div>
     </Container>
